@@ -3,9 +3,10 @@
 `Introducción.` **Introducción a las Herramientas y Aplicaciones de la IA**
 
 0. Guía de aprendizaje  
-1. Herramientas computacionales      
-2. Introducción a Herramientas y Aplicaciones de la IA  
-3. Herramientas de extracción de datos de diferentes fuentes 
+1. Herramientas computacionales
+2. Introducción a Herramientas y Aplicaciones de la IA
+3. Análisis Simbólico con Python
+4. Herramientas de extracción de datos de diferentes fuentes 
 
 
 `Módulo 1.` **Herramientas para procesamiento de datos y análisis de datos**
