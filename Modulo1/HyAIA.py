@@ -10,7 +10,7 @@ class HyAIA:
         self.data_cuantitativos, self.cuantitativos_columns = self.get_cuantitativos()
         self.data_categoricos, self.categoricos_columns = self.get_categoricos()
         self.df_dqr= self.get_dqr()
-        self.
+
         
     ##% Métodos para Análisis de Datos 
     #Método para obtener las columnas y dataframe binarios
@@ -113,7 +113,7 @@ class HyAIA:
         unique_values = pd.DataFrame(columns=['Unique_values'])
         for col in list(self.data.columns.values):
             unique_values.loc[col] = [data[col].nunique()]
-    
+    #----------------------------------------------------------------------------------
     # Información estadística
     #Lista de valores máximos
         max_values=pd.DataFrame(columns=['Max_values'])
@@ -139,19 +139,19 @@ class HyAIA:
             except:
                 std_values.loc[col] = ['N/A']
     #Lista de valores con los percentiles
-         percentiles = pd.DataFrame(columns=['P25', 'P50', 'P75'])
+        percentiles = pd.DataFrame(columns=['P25', 'P50', 'P75'])
         for col in data.columns:
             try:
                 percentiles.loc[col] = [data[col].quantile(0.25),data[col].quantile(0.50),data[col].quantile(0.75) ]
-        except:
-            percentiles.loc[col] = ['N/A', 'N/A', 'N/A']
+            except:
+                percentiles.loc[col] = ['N/A', 'N/A', 'N/A']
     #Lista de valores con la media
-	mean_values = pd.DataFrame(columns=['Mean'])
-  	  for col in data.columns:
-        	try:
-           	 mean_values.loc[col] = [data[col].mean()]
+	    mean_values = pd.DataFrame(columns=['Mean'])
+        for col in data.columns:
+            try:
+           	    mean_values.loc[col] = [data[col].mean()]
       		except:
-            		mean_values.loc[col] = ['N/A']
+            	mean_values.loc[col] = ['N/A']
        
-    return columns.join(data_dtypes).join(present_values).join(missing_values).join(unique_values).join(max_values).join(min_values)   .join(std_values).join(percentiles).join(mean_values)
+        return columns.join(data_dtypes).join(present_values).join(missing_values).join(unique_values).join(max_values).join(min_values)   .join(std_values).join(percentiles).join(mean_values)
    
